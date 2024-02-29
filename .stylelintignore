@@ -1,0 +1,16 @@
+*.js
+*.tsx
+*.ts
+*.json
+*.png
+*.eot
+*.ttf
+*.woff
+*.css
+
+/dist/*
+/public/*
+public/*
+/mock/*
+/node_modules/*
+/types/*
