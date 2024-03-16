@@ -12,7 +12,6 @@ import Components from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-// import stylelint from 'vite-plugin-stylelint'
 
 export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 	// 获取当前工作目录
