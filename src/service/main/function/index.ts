@@ -6,7 +6,7 @@ import { ylRequest1 } from '@/service'
  */
 
 export const getCircular = (data?: any) => {
-  return ylRequest1.post({ url: '/lottery/circular', data })
+	return ylRequest1.post({ url: '/lottery/circular', data })
 }
 
 /**
@@ -15,5 +15,5 @@ export const getCircular = (data?: any) => {
  */
 
 export const getNineLucky = (data?: any) => {
-  return ylRequest1.post({ url: '/lottery/nineLucky', data })
+	return ylRequest1.post({ url: '/lottery/nineLucky', data })
 }

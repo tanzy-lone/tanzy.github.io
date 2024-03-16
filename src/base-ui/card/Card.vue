@@ -1,25 +1,25 @@
 <template>
-  <el-card>
-    <template #header>
-      <div class="header">
-        <span>{{ title }}</span>
-      </div>
-    </template>
-    <div class="item">
-      <slot />
-    </div>
-  </el-card>
+	<el-card>
+		<template #header>
+			<div class="header">
+				<span>{{ title }}</span>
+			</div>
+		</template>
+		<div class="item">
+			<slot />
+		</div>
+	</el-card>
 </template>
 
 <script lang="ts" setup>
 import { withDefaults } from 'vue'
 const props = withDefaults(
-  defineProps<{
-    title: string
-  }>(),
-  {
-    title: 'Title'
-  }
+	defineProps<{
+		title: string
+	}>(),
+	{
+		title: 'Title'
+	}
 )
 </script>
 

@@ -1,25 +1,21 @@
 <template>
-  <div class="main">
-    <el-container>
-      <el-aside width="210px">
-        <MainMenu :collapse="isCollapse" />
-      </el-aside>
+	<div class="main">
+		<el-container>
+			<el-aside width="210px">
+				<MainMenu :collapse="isCollapse" />
+			</el-aside>
 
-      <el-container>
-        <el-header>
-          <MainHeader @handle-collapse="clickCollapse" />
-        </el-header>
-        <MyTabs></MyTabs>
-        <el-main>
-          <router-view v-slot="{ Component }">
-            <transition>
-              <component :is="Component" />
-            </transition>
-          </router-view>
-        </el-main>
-      </el-container>
-    </el-container>
-  </div>
+			<el-container>
+				<el-header>
+					<MainHeader @handle-collapse="clickCollapse" />
+				</el-header>
+				<MyTabs></MyTabs>
+				<el-main>
+					<router-view> </router-view>
+				</el-main>
+			</el-container>
+		</el-container>
+	</div>
 </template>
 
 <script lang="ts" setup>
@@ -29,32 +25,44 @@ import MyTabs from '@/base-ui/tabs/tabs.vue'
 import { ref } from 'vue'
 
 const isCollapse = ref(false)
+
+// const LayoutComponents = {
+// 	vertical: LayoutVertical,
+// 	classic: LayoutClassic,
+// 	transverse: LayoutTransverse,
+// 	columns: LayoutColumns
+// };
+
 const clickCollapse = (isFold: boolean) => {
-  isCollapse.value = isFold
+	isCollapse.value = isFold
 }
 </script>
 
 <style lang="less" scoped>
 .main {
-  height: 100vh;
-  position: relative;
+	position: relative;
+	height: 100vh;
 }
+
 .el-container {
-  height: 100%;
+	height: 100%;
 }
+
 .el-aside {
-  width: auto;
-  height: 100%;
-  padding-right: 0;
+	padding-right: 0;
+	width: auto;
+	height: 100%;
 }
+
 .el-header {
-  display: flex;
-  align-items: center;
-  height: 49px;
-  background-color: #fff;
+	display: flex;
+	align-items: center;
+	height: 49px;
+	background-color: #fff;
 }
+
 .el-main {
-  height: calc(100% - 48px);
-  background-color: #f0f2f5;
+	height: calc(100% - 48px);
+	background-color: #f0f2f5;
 }
 </style>

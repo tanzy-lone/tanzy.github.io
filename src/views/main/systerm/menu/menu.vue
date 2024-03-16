@@ -1,14 +1,14 @@
 <template>
-  <div class="menu">
-    <pageContent page-name="menu" :content-data-config="contentDataConfig">
-      <template #headerHandler>
-        <div class="header-handler">
-          <el-button type="primary">新建菜单</el-button>
-          <el-button :icon="Refresh"></el-button>
-        </div>
-      </template>
-    </pageContent>
-  </div>
+	<div class="menu">
+		<pageContent page-name="menu" :content-data-config="contentDataConfig">
+			<template #headerHandler>
+				<div class="header-handler">
+					<el-button type="primary">新建菜单</el-button>
+					<el-button :icon="Refresh"></el-button>
+				</div>
+			</template>
+		</pageContent>
+	</div>
 </template>
 
 <script lang="ts" setup>

@@ -1,9 +1,9 @@
 <template>
-  <div class="app-wrapper">
-    <el-config-provider :locale="i18nLocale">
-      <RouterView />
-    </el-config-provider>
-  </div>
+	<div class="app-wrapper">
+		<el-config-provider :locale="i18nLocale">
+			<RouterView />
+		</el-config-provider>
+	</div>
 </template>
 
 <script setup lang="ts">
@@ -14,13 +14,14 @@ import en from 'element-plus/es/locale/lang/en'
 import { getBrowserLang } from '@/utils/tools'
 import { useTheme } from '@/hooks/useTheme'
 
-useTheme()
+const { switchDark } = useTheme()
+switchDark()
 const globalStore = useGlobalStore()
 
 const i18nLocale = computed(() => {
-  if (globalStore.language && globalStore.language === 'zh') return zhCn
-  if (globalStore.language && globalStore.language === 'en') return en
-  return getBrowserLang() === 'zh' ? zhCn : en
+	if (globalStore.language && globalStore.language === 'zh') return zhCn
+	if (globalStore.language && globalStore.language === 'en') return en
+	return getBrowserLang() === 'zh' ? zhCn : en
 })
 </script>
 

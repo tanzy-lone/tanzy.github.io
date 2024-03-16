@@ -15,13 +15,10 @@
 }
 
 .white {
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	inset: 0;
 	background: white;
-	animation: flash 2.4s linear infinite;
 	opacity: 0;
+	animation: flash 2.4s linear infinite;
 }
 
 .dot {
@@ -37,30 +34,30 @@
 	top: 0;
 	bottom: 0;
 	left: 0;
-	background: #ff4444;
+	background: #f44;
 	animation: dotsY 2.4s linear infinite;
 }
 
 .dot:nth-child(3) {
-	left: 0;
-	right: 0;
 	top: 0;
-	background: #ffbb33;
+	right: 0;
+	left: 0;
+	background: #fb3;
 	animation: dotsX 2.4s linear infinite;
 }
 
 .dot:nth-child(4) {
 	top: 0;
-	bottom: 0;
 	right: 0;
-	background: #99cc00;
+	bottom: 0;
+	background: #9c0;
 	animation: dotsY 2.4s linear infinite;
 }
 
 .dot:nth-child(5) {
-	left: 0;
 	right: 0;
 	bottom: 0;
+	left: 0;
 	background: #33b5e5;
 	animation: dotsX 2.4s linear infinite;
 }
@@ -89,37 +86,37 @@
 
 @keyframes dotsY {
 	66% {
-		opacity: 0.1;
 		width: 2.4em;
+		opacity: 0.1;
 	}
 
 	77% {
-		opacity: 1;
 		width: 0;
+		opacity: 1;
 	}
 }
 
 @keyframes dotsX {
 	66% {
-		opacity: 0.1;
 		height: 2.4em;
+		opacity: 0.1;
 	}
 
 	77% {
-		opacity: 1;
 		height: 0;
+		opacity: 1;
 	}
 }
 
 @keyframes flash {
 	33% {
-		opacity: 0;
 		border-radius: 0%;
+		opacity: 0;
 	}
 
 	55% {
-		opacity: 0.6;
 		border-radius: 100%;
+		opacity: 0.6;
 	}
 
 	66% {

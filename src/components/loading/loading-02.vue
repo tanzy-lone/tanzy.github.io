@@ -10,27 +10,28 @@
 	--uib-size: 35px;
 	--uib-speed: 0.8s;
 	--uib-color: #5d3fd3;
+
 	position: relative;
 	display: inline-block;
-	height: var(--uib-size);
 	width: var(--uib-size);
+	height: var(--uib-size);
 	animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
 }
 
 .three-body__dot {
 	position: absolute;
-	height: 100%;
 	width: 30%;
+	height: 100%;
 }
 
-.three-body__dot:after {
-	content: "";
+.three-body__dot::after {
 	position: absolute;
-	height: 0%;
-	width: 100%;
 	padding-bottom: 100%;
+	width: 100%;
+	height: 0%;
 	background-color: var(--uib-color);
 	border-radius: 50%;
+	content: '';
 }
 
 .three-body__dot:nth-child(1) {
@@ -48,8 +49,8 @@
 }
 
 .three-body__dot:nth-child(2) {
-	bottom: 5%;
 	right: 0;
+	bottom: 5%;
 	transform: rotate(-60deg);
 	transform-origin: 50% 85%;
 }

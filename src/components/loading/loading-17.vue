@@ -5,28 +5,28 @@
 </template>
 <style scoped>
 .loader {
-	animation: rotate 1s infinite;
-	height: 50px;
 	width: 50px;
+	height: 50px;
+	animation: rotate 1s infinite;
 }
 
-.loader:before,
-.loader:after {
-	border-radius: 50%;
-	content: "";
+.loader::before,
+.loader::after {
 	display: block;
-	height: 20px;
 	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	content: '';
 }
 
-.loader:before {
-	animation: ball1 1s infinite;
+.loader::before {
+	margin-bottom: 10px;
 	background-color: #cb2025;
 	box-shadow: 30px 0 0 #f8b334;
-	margin-bottom: 10px;
+	animation: ball1 1s infinite;
 }
 
-.loader:after {
+.loader::after {
 	animation: ball2 1s infinite;
 	background-color: #00a096;
 	box-shadow: 30px 0 0 #97bf0d;
@@ -55,15 +55,15 @@
 	}
 
 	50% {
-		box-shadow: 0 0 0 #f8b334;
 		margin-bottom: 0;
+		box-shadow: 0 0 0 #f8b334;
 		-webkit-transform: translate(15px, 15px);
 		-moz-transform: translate(15px, 15px);
 	}
 
 	100% {
-		box-shadow: 30px 0 0 #f8b334;
 		margin-bottom: 10px;
+		box-shadow: 30px 0 0 #f8b334;
 	}
 }
 
@@ -73,15 +73,15 @@
 	}
 
 	50% {
-		box-shadow: 0 0 0 #97bf0d;
 		margin-top: -20px;
+		box-shadow: 0 0 0 #97bf0d;
 		-webkit-transform: translate(15px, 15px);
 		-moz-transform: translate(15px, 15px);
 	}
 
 	100% {
-		box-shadow: 30px 0 0 #97bf0d;
 		margin-top: 0;
+		box-shadow: 30px 0 0 #97bf0d;
 	}
 }
 </style>

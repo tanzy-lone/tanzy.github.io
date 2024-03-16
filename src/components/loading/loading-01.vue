@@ -16,20 +16,21 @@
 </template>
 <style scoped lang="less">
 .spinner {
-	font-size: 28px;
 	position: relative;
 	display: inline-block;
 	width: 1em;
 	height: 1em;
+	font-size: 28px;
 }
+
 .spinner .spinner-blade {
 	position: absolute;
-	left: 0.4629em;
 	bottom: 0;
+	left: 0.4629em;
 	width: 0.074em;
 	height: 0.2777em;
-	border-radius: 0.0555em;
 	background-color: transparent;
+	border-radius: 0.0555em;
 	-webkit-transform-origin: center -0.2222em;
 	-ms-transform-origin: center -0.2222em;
 	transform-origin: center -0.2222em;

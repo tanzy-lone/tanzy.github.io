@@ -1,5 +1,5 @@
 export default {
-  test: {
-    name: '中文'
-  }
+	test: {
+		name: '中文'
+	}
 }

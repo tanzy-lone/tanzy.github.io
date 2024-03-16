@@ -6,57 +6,54 @@
 </template>
 <style scoped>
 .loading-item {
-	margin: 0 auto;
-	height: 20px;
-	width: 20px;
 	position: relative;
-	animation: spin 1.5s linear infinite;
-	animation: spin 1.5s linear infinite;
-}
-.loading-item i {
-	height: 20px;
+	margin: 0 auto;
 	width: 20px;
+	height: 20px;
+	animation: spin 1.5s linear infinite;
+}
+
+.loading-item i {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 20px;
 	border-radius: 25px;
-	display: block;
-	position: absolute;
 }
 
-.loading-item i:before,
-.loading-item i:after {
-	content: "";
-	display: block;
+.loading-item i::before,
+.loading-item i::after {
 	position: absolute;
-	height: inherit;
+	display: block;
 	width: inherit;
+	height: inherit;
 	border-radius: inherit;
+	content: '';
 }
 
-.loading-item i:first-child:before {
-	background: rgba(52, 149, 221, 0.9);
+.loading-item i:first-child::before {
+	background: rgb(52 149 221 / 90%);
 	animation: rotate-top-left 1.5s linear infinite;
-	animation: rotate-top-left 1.5s linear infinite;
 }
 
-.loading-item i:first-child:after {
-	background: rgba(225, 73, 44, 0.9);
-	animation: rotate-top-right 1.5s linear infinite;
+.loading-item i:first-child::after {
+	background: rgb(225 73 44 / 90%);
 	animation: rotate-top-right 1.5s linear infinite;
 }
 
-.loading-item i:last-child:before {
-	background: rgba(249, 206, 43, 0.9);
-	animation: rotate-bottom-left 1.5s linear infinite;
+.loading-item i:last-child::before {
+	background: rgb(249 206 43 / 90%);
 	animation: rotate-bottom-left 1.5s linear infinite;
 }
 
-.loading-item i:last-child:after {
-	background: rgba(0, 153, 117, 0.9);
-	animation: rotate-bottom-right 1.5s linear infinite;
+.loading-item i:last-child::after {
+	background: rgb(0 153 117 / 90%);
 	animation: rotate-bottom-right 1.5s linear infinite;
 }
+
 .loading-text {
-	text-align: center;
 	margin-top: 30px;
+	text-align: center;
 	color: #fff;
 }
 

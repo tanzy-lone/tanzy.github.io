@@ -1,0 +1,108 @@
+/* 自定义 element 暗黑模式样式 */
+html.dark {
+	--geeker-bg-color: #141414;
+	--geeker-main-bg-color: #0d0d0d;
+	--geeker-border-light: 1px solid #4c4c4d;
+	--light-color: #fff;
+	--light-bg-color: #fff;
+	--el-card-bg-color: #0d0d0d;
+	--el-fill-color-blank: #0d0d0d;
+	--w-e-toolbar-color: #595959;
+	--w-e-toolbar-bg-color: #eeeeee;
+	--w-e-textarea-bg-color: #141414;
+	--w-e-textarea-color: #eeeeee;
+}
+html.dark .login-container {
+	background-color: var(--el-fill-color-extra-light) !important;
+}
+html.dark .login-container .login-box {
+	background-color: var(--el-mask-color) !important;
+}
+html.dark .login-container .login-box .login-form {
+	background-color: var(--el-bg-color) !important;
+	box-shadow: 5px 5px 15px rgba(161, 161, 161, 0.2) !important;
+}
+html.dark .login-container .login-box .login-form .logo-text {
+	color: var(--el-text-color-primary) !important;
+}
+html.dark .overview {
+	color: var(--light-color);
+}
+html.dark .dashboard .el-card {
+	color: #fff;
+}
+html.dark .main-header .header-left {
+	color: var(--light-color);
+}
+html.dark .main-header .header-left .bread-crumb {
+	--el-text-color-regular: #fff;
+	color: var(--light-color) !important;
+}
+html.dark ::-webkit-scrollbar {
+	background-color: var(--el-scrollbar-bg-color) !important;
+}
+html.dark ::-webkit-scrollbar-thumb {
+	background-color: var(--el-border-color-darker) !important;
+}
+html.dark .el-container .el-aside {
+	background-color: var(--geeker-bg-color) !important;
+	border-right: var(--geeker-border-light) !important;
+}
+html.dark .el-container .el-aside .logo {
+	border-bottom: var(--geeker-border-light) !important;
+}
+html.dark .el-container .not-aside {
+	border-right: none !important;
+}
+html.dark .el-container .el-header {
+	background-color: var(--geeker-bg-color) !important;
+	border-bottom-color: var(--el-border-color-light) !important;
+}
+html.dark .el-container .el-main {
+	background-color: var(--geeker-main-bg-color) !important;
+}
+html.dark .el-container .el-main .card {
+	background-color: var(--geeker-bg-color) !important;
+}
+html.dark .el-container .el-tabs {
+	background-color: var(--geeker-bg-color) !important;
+}
+html.dark .el-container .el-footer .footer {
+	background-color: var(--geeker-bg-color) !important;
+	border-top-color: var(--el-border-color-light) !important;
+}
+html.dark .el-container .el-footer .footer a {
+	color: var(--el-text-color-regular) !important;
+}
+html.dark .el-menu,
+html.dark .el-sub-menu,
+html.dark .el-menu-item,
+html.dark .el-sub-menu__title {
+	background-color: var(--geeker-bg-color) !important;
+}
+html.dark .el-menu:not(.is-active),
+html.dark .el-sub-menu:not(.is-active),
+html.dark .el-menu-item:not(.is-active),
+html.dark .el-sub-menu__title:not(.is-active) {
+	color: #bdbdc0 !important;
+}
+html.dark .el-menu.is-active,
+html.dark .el-sub-menu.is-active,
+html.dark .el-menu-item.is-active,
+html.dark .el-sub-menu__title.is-active {
+	color: #ffffff !important;
+	background-color: #000000 !important;
+}
+html.dark .el-menu-item:not(.is-active):hover {
+	background-color: var(--geeker-main-bg-color) !important;
+}
+html.dark .aside-split {
+	background-color: var(--geeker-bg-color) !important;
+	border-right: var(--geeker-border-light) !important;
+}
+html.dark .aside-split .logo {
+	border-bottom: var(--geeker-border-light) !important;
+}
+html.dark #driver-highlighted-element-stage {
+	background-color: var(--el-color-info-light-5) !important;
+}

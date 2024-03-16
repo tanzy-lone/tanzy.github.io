@@ -79,7 +79,7 @@
 
 /* Animations */
 @keyframes ringA {
-	from,
+	0%,
 	4% {
 		stroke-dasharray: 0 660;
 		stroke-width: 20;
@@ -118,7 +118,7 @@
 	}
 
 	90%,
-	to {
+	100% {
 		stroke-dasharray: 0 660;
 		stroke-width: 20;
 		stroke-dashoffset: -990;
@@ -126,7 +126,7 @@
 }
 
 @keyframes ringB {
-	from,
+	0%,
 	12% {
 		stroke-dasharray: 0 220;
 		stroke-width: 20;
@@ -165,7 +165,7 @@
 	}
 
 	98%,
-	to {
+	100% {
 		stroke-dasharray: 0 220;
 		stroke-width: 20;
 		stroke-dashoffset: -330;
@@ -173,7 +173,7 @@
 }
 
 @keyframes ringC {
-	from {
+	0% {
 		stroke-dasharray: 0 440;
 		stroke-width: 20;
 		stroke-dashoffset: 0;
@@ -211,7 +211,7 @@
 	}
 
 	94%,
-	to {
+	100% {
 		stroke-dasharray: 0 440;
 		stroke-width: 20;
 		stroke-dashoffset: -440;
@@ -219,7 +219,7 @@
 }
 
 @keyframes ringD {
-	from,
+	0%,
 	8% {
 		stroke-dasharray: 0 440;
 		stroke-width: 20;
@@ -258,7 +258,7 @@
 	}
 
 	86%,
-	to {
+	100% {
 		stroke-dasharray: 0 440;
 		stroke-width: 20;
 		stroke-dashoffset: -440;

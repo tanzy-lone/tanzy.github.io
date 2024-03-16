@@ -16,28 +16,28 @@
 }
 
 .loader-cube {
+	position: relative;
 	width: 80px;
 	height: 80px;
-	position: relative;
 	transform-style: preserve-3d;
 	transform-origin: 50% 50%;
 	animation: rotate 4s infinite linear;
 }
 
-.loader-cube:before,
-.loader-cube:after {
-	content: "";
+.loader-cube::before,
+.loader-cube::after {
+	content: '';
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	background-color: transparent;
 }
 
-.loader-cube:before {
+.loader-cube::before {
 	transform: rotateX(90deg) translateZ(40px);
 }
 
-.loader-cube:after {
+.loader-cube::after {
 	transform: rotateY(90deg) translateZ(40px);
 }
 
@@ -45,9 +45,9 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: rgb(252, 248, 248);
+	background-color: rgb(252 248 248);
+	border: 2px solid rgb(252 250 250);
 	opacity: 0.8;
-	border: 2px solid rgb(252, 250, 250);
 }
 
 .loader-cube .face:nth-child(1) {

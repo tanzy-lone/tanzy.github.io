@@ -3,24 +3,25 @@
 </template>
 <style scoped>
 .loader {
+	position: relative;
 	width: 44.8px;
 	height: 44.8px;
 	color: #7e83fe;
-	position: relative;
 	background: radial-gradient(11.2px, currentColor 94%, #0000);
 }
 
-.loader:before {
-	content: "";
+.loader::before {
 	position: absolute;
-	inset: 0;
-	border-radius: 50%;
-	background: radial-gradient(10.08px at bottom right, #0000 94%, currentColor) top left,
+	background:
+		radial-gradient(10.08px at bottom right, #0000 94%, currentColor) top left,
 		radial-gradient(10.08px at bottom left, #0000 94%, currentColor) top right,
 		radial-gradient(10.08px at top right, #0000 94%, currentColor) bottom left,
 		radial-gradient(10.08px at top left, #0000 94%, currentColor) bottom right;
-	background-size: 22.4px 22.4px;
 	background-repeat: no-repeat;
+	background-size: 22.4px 22.4px;
+	border-radius: 50%;
+	content: '';
+	inset: 0;
 	animation: loader 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
 }
 

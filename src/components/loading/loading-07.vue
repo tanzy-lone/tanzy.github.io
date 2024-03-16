@@ -5,18 +5,18 @@
 .loader {
 	position: relative;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 }
 
 .loader::before,
 .loader::after {
 	position: absolute;
-	content: "";
-	height: 8em;
 	width: 8em;
+	height: 8em;
 	border: 1em solid #0060fa;
 	border-radius: 50%;
+	content: '';
 	animation: loader_79178 2s linear infinite;
 }
 

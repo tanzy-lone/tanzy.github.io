@@ -7,7 +7,7 @@ import i18n from './language'
 import directives from './directives'
 import 'default-passive-events'
 
-import '@/assets/less/global.less'
+import '@/assets/less/index.less'
 
 // 创建pinia
 const app = createApp(App)

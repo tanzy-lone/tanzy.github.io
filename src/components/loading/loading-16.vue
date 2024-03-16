@@ -3,33 +3,33 @@
 </template>
 <style scoped>
 .loader {
+	position: relative;
+	margin: auto;
 	width: 48px;
 	height: 48px;
-	margin: auto;
-	position: relative;
 }
 
-.loader:before {
-	content: "";
-	width: 48px;
-	height: 5px;
-	background: #999;
+.loader::before {
 	position: absolute;
 	top: 60px;
 	left: 0;
+	width: 48px;
+	height: 5px;
+	background: #999;
 	border-radius: 50%;
+	content: '';
 	animation: shadow324 0.5s linear infinite;
 }
 
-.loader:after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	background: rgb(61, 106, 255);
+.loader::after {
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(61 106 255);
 	border-radius: 4px;
+	content: '';
 	animation: jump7456 0.5s linear infinite;
 }
 

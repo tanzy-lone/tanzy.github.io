@@ -8,17 +8,17 @@
 </template>
 <style scoped>
 .loading-wave {
-	width: 300px;
-	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+	width: 300px;
+	height: 100px;
 }
 
 .loading-bar {
+	margin: 0 5px;
 	width: 8px;
 	height: 10px;
-	margin: 0 5px;
 	background-color: #3498db;
 	border-radius: 5px;
 	animation: loading-wave-animation 1s ease-in-out infinite;

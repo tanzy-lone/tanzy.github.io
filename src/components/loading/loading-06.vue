@@ -3,18 +3,18 @@
 </template>
 <style scoped>
 .spinner {
+	display: grid;
 	width: 56px;
 	height: 56px;
-	display: grid;
 	border: 4.5px solid #0000;
-	border-radius: 50%;
 	border-color: #dbdcef #0000;
+	border-radius: 50%;
 	animation: spinner-e04l1k 1s infinite linear;
 }
 
 .spinner::before,
 .spinner::after {
-	content: "";
+	content: '';
 	grid-area: 1/1;
 	margin: 2.2px;
 	border: inherit;

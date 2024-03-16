@@ -1,0 +1,397 @@
+/* 自定义 element 暗黑模式样式 */
+html.dark {
+	--geeker-bg-color: #141414;
+	--geeker-main-bg-color: #0d0d0d;
+	--geeker-border-light: 1px solid #4c4c4d;
+	--w-e-toolbar-color: #595959;
+	--w-e-toolbar-bg-color: #eeeeee;
+	--w-e-textarea-bg-color: #141414;
+	--w-e-textarea-color: #eeeeee;
+}
+html.dark .login-container {
+	background-color: var(--el-fill-color-extra-light) !important;
+}
+html.dark .login-container .login-box {
+	background-color: var(--el-mask-color) !important;
+}
+html.dark .login-container .login-box .login-form {
+	background-color: var(--el-bg-color) !important;
+	box-shadow: 5px 5px 15px rgba(161, 161, 161, 0.2) !important;
+}
+html.dark .login-container .login-box .login-form .logo-text {
+	color: var(--el-text-color-primary) !important;
+}
+html.dark ::-webkit-scrollbar {
+	background-color: var(--el-scrollbar-bg-color) !important;
+}
+html.dark ::-webkit-scrollbar-thumb {
+	background-color: var(--el-border-color-darker) !important;
+}
+html.dark .el-container .el-aside {
+	background-color: var(--geeker-bg-color) !important;
+	border-right: var(--geeker-border-light) !important;
+}
+html.dark .el-container .el-aside .logo {
+	border-bottom: var(--geeker-border-light) !important;
+}
+html.dark .el-container .not-aside {
+	border-right: none !important;
+}
+html.dark .el-container .el-header {
+	background-color: var(--geeker-bg-color) !important;
+	border-bottom-color: var(--el-border-color-light) !important;
+}
+html.dark .el-container .el-main {
+	background-color: var(--geeker-main-bg-color) !important;
+}
+html.dark .el-container .el-main .card {
+	background-color: var(--geeker-bg-color) !important;
+}
+html.dark .el-container .el-tabs {
+	background-color: var(--geeker-bg-color) !important;
+}
+html.dark .el-container .el-footer .footer {
+	background-color: var(--geeker-bg-color) !important;
+	border-top-color: var(--el-border-color-light) !important;
+}
+html.dark .el-container .el-footer .footer a {
+	color: var(--el-text-color-regular) !important;
+}
+html.dark .el-menu,
+html.dark .el-sub-menu,
+html.dark .el-menu-item,
+html.dark .el-sub-menu__title {
+	background-color: var(--geeker-bg-color) !important;
+}
+html.dark .el-menu:not(.is-active),
+html.dark .el-sub-menu:not(.is-active),
+html.dark .el-menu-item:not(.is-active),
+html.dark .el-sub-menu__title:not(.is-active) {
+	color: #bdbdc0 !important;
+}
+html.dark .el-menu.is-active,
+html.dark .el-sub-menu.is-active,
+html.dark .el-menu-item.is-active,
+html.dark .el-sub-menu__title.is-active {
+	color: #ffffff !important;
+	background-color: #000000 !important;
+}
+html.dark .el-menu-item:not(.is-active):hover {
+	background-color: var(--geeker-main-bg-color) !important;
+}
+html.dark .aside-split {
+	background-color: var(--geeker-bg-color) !important;
+	border-right: var(--geeker-border-light) !important;
+}
+html.dark .aside-split .logo {
+	border-bottom: var(--geeker-border-light) !important;
+}
+html.dark #driver-highlighted-element-stage {
+	background-color: var(--el-color-info-light-5) !important;
+}
+a,
+body,
+center,
+cite,
+code,
+dd,
+del,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hr,
+html,
+img,
+input,
+label,
+legend,
+li,
+mark,
+ol,
+p,
+section,
+span,
+textarea,
+time,
+td,
+th,
+ul {
+	box-sizing: border-box;
+}
+.text-center {
+	text-align: center;
+}
+html,
+body,
+#app {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+}
+/* 解决 h1 标签在 webkit 内核浏览器中文字大小失效问题 */
+:-webkit-any(article, aside, nav, section) h1 {
+	font-size: 2em;
+}
+/* fade-transform */
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+	transition: all 0.2s;
+}
+.fade-transform-enter-from {
+	opacity: 0;
+	transition: all 0.2s;
+	transform: translateY(60px);
+}
+.fade-transform-leave-to {
+	opacity: 0;
+	transition: all 0.2s;
+	transform: translateY(-60px);
+}
+.el-message,
+.el-notification {
+	z-index: 99999 !important;
+}
+.el-alert {
+	border: 1px solid;
+}
+.el-popup-parent--hidden {
+	width: 100% !important;
+}
+.main-maximize .aside-split,
+.main-maximize .el-aside,
+.main-maximize .el-header,
+.main-maximize .el-footer,
+.main-maximize .tabs-box {
+	display: none !important;
+}
+.card {
+	box-sizing: border-box;
+	padding: 20px;
+	overflow-x: hidden;
+	background-color: var(--el-fill-color-blank);
+	border: 1px solid var(--el-border-color-light);
+	border-radius: 4px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+.no-card .card {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+.content-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+.content-box .text {
+	margin: 20px 0 30px;
+	font-size: 23px;
+	font-weight: bold;
+	color: var(--el-text-color-regular);
+}
+.content-box .el-descriptions {
+	width: 100%;
+	padding: 40px 0 0;
+}
+.content-box .el-descriptions .el-descriptions__title {
+	font-size: 18px;
+}
+.content-box .el-descriptions .el-descriptions__label {
+	width: 200px;
+}
+.main-box {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.main-box .table-box {
+	width: calc(100% - 230px);
+}
+.table,
+.table-box {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+.table .table-search,
+.table-box .table-search {
+	padding: 18px 18px 0;
+	margin-bottom: 10px;
+}
+.table .table-search .el-form .el-input,
+.table-box .table-search .el-form .el-input,
+.table .table-search .el-form .el-select,
+.table-box .table-search .el-form .el-select,
+.table .table-search .el-form .el-cascader,
+.table-box .table-search .el-form .el-cascader,
+.table .table-search .el-form .el-date-editor--timerange,
+.table-box .table-search .el-form .el-date-editor--timerange,
+.table .table-search .el-form .el-date-editor--datetimerange,
+.table-box .table-search .el-form .el-date-editor--datetimerange,
+.table .table-search .el-form .el-date-editor--daterange,
+.table-box .table-search .el-form .el-date-editor--daterange {
+	width: 100%;
+}
+.table .table-search .el-form .el-range-editor.el-input__wrapper,
+.table-box .table-search .el-form .el-range-editor.el-input__wrapper {
+	padding: 0 10px;
+}
+.table .table-search .el-form .el-select__tags,
+.table-box .table-search .el-form .el-select__tags {
+	overflow: hidden;
+	white-space: nowrap;
+}
+.table .table-search .operation,
+.table-box .table-search .operation {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-bottom: 18px;
+}
+.table .table-header .header-button-lf,
+.table-box .table-header .header-button-lf {
+	float: left;
+}
+.table .table-header .header-button-ri,
+.table-box .table-header .header-button-ri {
+	float: right;
+}
+.table .table-header .el-button,
+.table-box .table-header .el-button {
+	margin-bottom: 15px;
+}
+.table .el-table,
+.table-box .el-table {
+	flex: 1;
+}
+.table .el-table table,
+.table-box .el-table table {
+	width: 100%;
+}
+.table .el-table .el-table__header th,
+.table-box .el-table .el-table__header th {
+	height: 45px;
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--el-text-color-primary);
+	background: var(--el-fill-color-light);
+}
+.table .el-table .el-table__row,
+.table-box .el-table .el-table__row {
+	height: 45px;
+	font-size: 14px;
+}
+.table .el-table .el-table__header .el-table__cell > .cell,
+.table-box .el-table .el-table__header .el-table__cell > .cell {
+	white-space: nowrap;
+}
+.table .el-table .el-table__empty-block,
+.table-box .el-table .el-table__empty-block {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.table .el-table .el-table__empty-block .table-empty,
+.table-box .el-table .el-table__empty-block .table-empty {
+	line-height: 30px;
+}
+.table .el-table .table-image,
+.table-box .el-table .table-image {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.table .el-pagination,
+.table-box .el-pagination {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+}
+.el-table--small .el-table__header th {
+	height: 40px !important;
+	font-size: 14px !important;
+}
+.el-table--small .el-table__row {
+	height: 40px !important;
+	font-size: 13px !important;
+}
+.el-table--large .el-table__header th {
+	height: 50px !important;
+	font-size: 16px !important;
+}
+.el-table--large .el-table__row {
+	height: 50px !important;
+	font-size: 15px !important;
+}
+.el-drawer .el-drawer__header {
+	padding: 15px 20px 14px;
+	margin-bottom: 0;
+	border-bottom: 1px solid var(--el-border-color-lighter);
+}
+.el-drawer .el-drawer__header span {
+	font-size: 17px;
+	color: var(--el-text-color-primary) !important;
+}
+.el-drawer .el-drawer__footer {
+	border-top: 1px solid var(--el-border-color-lighter);
+}
+.el-drawer .el-select {
+	width: 100%;
+}
+.el-drawer .drawer-multiColumn-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+.el-drawer .drawer-multiColumn-form .el-form-item {
+	width: 47%;
+}
+.el-drawer .drawer-multiColumn-form .el-form-item:nth-child(2n-1) {
+	margin-right: 5%;
+}
+.el-dialog .el-dialog__header {
+	padding: 15px 20px;
+	margin: 0;
+	border-bottom: 1px solid var(--el-border-color-lighter);
+}
+.el-dialog .el-dialog__header .el-dialog__title {
+	font-size: 17px;
+}
+/* 文字单行省略号 */
+.sle {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/* 文字多行省略号 */
+.mle {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+/* 文字多了自動換行 */
+.break-word {
+	word-break: break-all;
+	word-wrap: break-word;
+}

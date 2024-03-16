@@ -1,4 +1,4 @@
 export interface IFormOptions {
-  name: string
-  password: string
+	name: string
+	password: string
 }

@@ -1,5 +1,6 @@
 import { ElMessage } from 'element-plus'
 import useGlobalStore from '@/store/globe'
+import { getLightColor, getDarkColor } from '@/utils/tools'
 import { computed, onBeforeMount } from 'vue'
 import { DEFAULT_PRIMARY } from '@/config'
 /**
@@ -7,36 +8,57 @@ import { DEFAULT_PRIMARY } from '@/config'
  */
 
 export const useTheme = () => {
-  const globalStore = useGlobalStore()
+	const globalStore = useGlobalStore()
 
-  const themeConfig = computed(() => {
-    return globalStore.themeConfig
-  })
+	const themeConfig = computed(() => {
+		return globalStore.themeConfig
+	})
 
-  // 修改主题色
-  const changePrimary = (val: string | null) => {
-    if (!val) {
-      val = DEFAULT_PRIMARY
-      ElMessage({
-        type: 'success',
-        message: `主题颜色已重置为 ${DEFAULT_PRIMARY}`
-      })
-    }
-    globalStore.setThemeConfigAction({
-      ...themeConfig.value,
-      primary: val
-    })
-    document.documentElement.style.setProperty(
-      '--el-color-primary',
-      themeConfig.value.primary
-    )
-  }
-  onBeforeMount(() => {
-    changePrimary(themeConfig.value.primary)
-  })
-  // 初始化 theme 配置
-  const initTheme = () => {
-    changePrimary(themeConfig.value.primary)
-  }
-  return { changePrimary, initTheme }
+	// 修改主题色
+	const changePrimary = (val: string | null) => {
+		if (!val) {
+			val = DEFAULT_PRIMARY
+			ElMessage({
+				type: 'success',
+				message: `主题颜色已重置为 ${DEFAULT_PRIMARY}`
+			})
+		}
+		globalStore.setThemeConfigAction({
+			...themeConfig.value,
+			primary: val
+		})
+		document.documentElement.style.setProperty('--el-color-primary', themeConfig.value.primary)
+		document.documentElement.style.setProperty(
+			'--el-color-primary-dark-2',
+			themeConfig.value.isDark
+				? `${getLightColor(themeConfig.value.primary, 0.2)}`
+				: `${getDarkColor(themeConfig.value.primary, 0.3)}`
+		)
+		// 颜色加深或变浅
+		for (let i = 1; i <= 9; i++) {
+			document.documentElement.style.setProperty(
+				`--el-color-primary-light-${i}`,
+				themeConfig.value.isDark
+					? `${getDarkColor(themeConfig.value.primary, i / 10)}`
+					: `${getLightColor(themeConfig.value.primary, i / 10)}`
+			)
+		}
+	}
+	// 切换黑夜模式
+	const switchDark = () => {
+		const body = document.documentElement
+		if (themeConfig.value.isDark) body.setAttribute('class', 'dark')
+		else body.setAttribute('class', '')
+		changePrimary(themeConfig.value.primary)
+	}
+
+	onBeforeMount(() => {
+		changePrimary(themeConfig.value.primary)
+	})
+	// 初始化 theme 配置
+	const initTheme = () => {
+		switchDark()
+		changePrimary(themeConfig.value.primary)
+	}
+	return { changePrimary, initTheme, switchDark }
 }
