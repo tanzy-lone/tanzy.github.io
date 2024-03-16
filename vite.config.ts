@@ -64,9 +64,6 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 			Icons({
 				autoInstall: true
 			})
-			// stylelint({
-			// 	fix: true
-			// })
 		],
 		define: {
 			// enable hydration mismatch details in production build
@@ -103,7 +100,28 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 				}
 			}
 		},
-
+		// 打包配置
+		build: {
+			// 关闭 sorcemap 报错不会映射到源码
+			sourcemap: false,
+			// 打包大小超出 400kb 提示警告
+			rollupOptions: {
+				// 打包入口文件 根目录下的 index.html
+				// 也就是项目从哪个文件开始打包
+				input: {
+					index: fileURLToPath(new URL('./index.html', import.meta.url))
+				},
+				// 将会在每个文件发现的第一个副作用打印到控制台
+				// 副作用包括 DOM的更新 操作等
+				experimentalLogSideEffects: true,
+				treeshake: {
+					// safest recommended smallest
+					// smallest 尽可能合并 也就是尽可能的进行tree shaking  将没用的代码删除
+					preset: 'recommended'
+					// propertyReadSideEffects: true
+				}
+			}
+		},
 		// 配置别名
 		resolve: {
 			alias: {
