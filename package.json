@@ -3,8 +3,8 @@
 	"private": true,
 	"version": "0.0.0",
 	"scripts": {
-		"dev": "vite",
-		"build": "vue-tsc && vite build",
+		"dev": "vite --mode development",
+		"build": "vue-tsc && vite build  --mode production",
 		"preview": "vite preview",
 		"lint:eslint": "eslint --cache --max-warnings 0 {src,mock}/**/*.{vue,ts,tsx} --fix",
 		"lint:prettier": "prettier --write **/*.{js,json,tsx,css,less,scss,vue,html,md}",
