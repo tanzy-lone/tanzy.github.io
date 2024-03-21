@@ -28,48 +28,48 @@ const nineList = ref([
 	{
 		title: '精美大礼包',
 		// imgUrl: '@/assets/lottery/gift.png',
-		imgUrl: new URL('@/assets/img/main/lottery/gift.png', import.meta.url).href,
+		imgUrl: new URL('@/assets/img/main/lottery/gift.png', import.meta.url).href as string,
 		index: 0
 	},
 	{
 		title: '华为手机',
 		// imgUrl: import('@/assets/lottery/phone.png'),
-		imgUrl: new URL('@/assets/img/main/lottery/phone.png', import.meta.url).href,
+		imgUrl: new URL('@/assets/img/main/lottery/phone.png', import.meta.url).href as string,
 		index: 1
 	},
 	{
 		title: '保时捷50元代金券',
-		imgUrl: new URL('@/assets/img/main/lottery/coupon.png', import.meta.url),
+		imgUrl: new URL('@/assets/img/main/lottery/coupon.png', import.meta.url).href as string,
 		index: 2
 	},
 	{
 		title: '谢谢参与',
-		imgUrl: new URL('@/assets/img/main/lottery/sorry.png', import.meta.url),
+		imgUrl: new URL('@/assets/img/main/lottery/sorry.png', import.meta.url).href as string,
 		index: 7
 	},
 	{
 		title: '',
-		imgUrl: new URL('@/assets/img/main/lottery/nineDraw.png', import.meta.url),
+		imgUrl: new URL('@/assets/img/main/lottery/nineDraw.png', import.meta.url).href as string,
 		index: -99
 	},
 	{
 		title: '劳斯莱斯雨伞',
-		imgUrl: new URL('@/assets/img/main/lottery/umbrella.png', import.meta.url),
+		imgUrl: new URL('@/assets/img/main/lottery/umbrella.png', import.meta.url).href as string,
 		index: 3
 	},
 	{
 		title: '9999元现金红包',
-		imgUrl: new URL('@/assets/img/main/lottery/money.png', import.meta.url),
+		imgUrl: new URL('@/assets/img/main/lottery/money.png', import.meta.url).href as string,
 		index: 6
 	},
 	{
 		title: 'iPhone',
-		imgUrl: new URL('@/assets/img/main/lottery/iPhone.png', import.meta.url),
+		imgUrl: new URL('@/assets/img/main/lottery/iPhone.png', import.meta.url).href as string,
 		index: 5
 	},
 	{
 		title: '888元现金红包',
-		imgUrl: new URL('@/assets/img/main/lottery/money.png', import.meta.url),
+		imgUrl: new URL('@/assets/img/main/lottery/money.png', import.meta.url).href as string,
 		index: 4
 	}
 ])

@@ -2,7 +2,7 @@
 	<el-card>
 		<template #header>
 			<div class="header">
-				<span>{{ title }}</span>
+				<span>{{ props.title }}</span>
 			</div>
 		</template>
 		<div class="item">

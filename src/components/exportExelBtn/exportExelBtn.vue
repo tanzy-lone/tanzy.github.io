@@ -10,7 +10,7 @@
 				class="m-2"
 				placeholder="请选择导出的类型"
 				size="large"
-				:modelValue="modelValue"
+				:modelValue="props.modelValue"
 				@update:modelValue="handleInput"
 			>
 				<el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />

@@ -25,9 +25,8 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { utils, write, read } from 'xlsx'
+import { utils, write } from 'xlsx'
 import FileSaver from 'file-saver'
-import { readFile } from '@/utils/tools'
 const bindPrint = () => {
 	const wb = utils.table_to_book(document.getElementById('table'), {
 		raw: true

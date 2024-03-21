@@ -1,7 +1,7 @@
 <template>
 	<div class="carousel">
-		<el-carousel :interval="interval" type="card" :height="height">
-			<el-carousel-item v-for="(item, index) in imgList" :key="index">
+		<el-carousel :interval="props.interval" type="card" :height="props.height">
+			<el-carousel-item v-for="(item, index) in props.imgList" :key="index">
 				<slot :data="item"></slot>
 			</el-carousel-item>
 		</el-carousel>

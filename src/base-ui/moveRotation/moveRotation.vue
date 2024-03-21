@@ -1,9 +1,9 @@
 <template>
-	<div class="move-rotation" :style="{ zIndex: Zindex, width: width, height: height }">
+	<div class="move-rotation" :style="{ zIndex: props.Zindex, width: props.width, height: props.height }">
 		<div class="move-wrapper">
 			<slot></slot>
 		</div>
-		<div class="move-img" :style="{ backgroundImage: `url(${image})` }"></div>
+		<div class="move-img" :style="{ backgroundImage: `url(${props.image})` }"></div>
 	</div>
 </template>
 

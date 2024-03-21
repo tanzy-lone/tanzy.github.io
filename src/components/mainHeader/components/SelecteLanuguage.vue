@@ -4,8 +4,8 @@
 			<img src="@/assets/svg/zhongyingwen.svg" style="width: 28px; height: 28px; cursor: pointer" />
 			<template #dropdown>
 				<el-dropdown-menu>
-					<el-dropdown-item :disabled="language && language === 'zh'" command="zh">简体中文</el-dropdown-item>
-					<el-dropdown-item :disabled="language && language === 'en'" command="en">English</el-dropdown-item>
+					<el-dropdown-item :disabled="language === 'zh'" command="zh">简体中文</el-dropdown-item>
+					<el-dropdown-item :disabled="language === 'en'" command="en">English</el-dropdown-item>
 				</el-dropdown-menu>
 			</template>
 		</el-dropdown>

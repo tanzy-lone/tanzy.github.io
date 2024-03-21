@@ -15,7 +15,6 @@
 import { ref } from 'vue'
 
 const isShowFullScreen = ref(true)
-const app = document.getElementById('app')
 const handleFullScreen = () => {
 	isShowFullScreen.value = !isShowFullScreen.value
 	if (document.fullscreenElement) {

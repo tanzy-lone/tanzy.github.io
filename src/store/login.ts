@@ -33,7 +33,7 @@ const loginStore = defineStore('loginStore', {
 			// 查询当前用户能访问那些菜单
 			const res2 = await fetchUserRole(res.data.id)
 			this.userInfo = res1.data
-			for (const item in res1.data) {
+			for (const _ in res1.data) {
 				res1.data['avatar'] = 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'
 			}
 			const arr = [

@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, toRefs, watch, onMounted } from 'vue'
+import { ref, reactive, toRefs, onMounted } from 'vue'
 import { getDataTimeStamp } from '@/utils/formatTime'
 import useMainStore from '@/store/main'
 import { ElMessage } from 'element-plus'

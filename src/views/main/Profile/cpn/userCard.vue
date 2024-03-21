@@ -7,14 +7,14 @@
 
 			<div class="user-profile">
 				<div class="box-center">
-					<moveRotation width="100px" height="100px" :image="userInfo.avatar">
+					<moveRotation width="100px" height="100px" :image="props.userInfo.avatar">
 						<div>Hello</div>
 						<div>My Master</div>
 					</moveRotation>
 				</div>
 				<div class="box-center">
-					<p class="name">{{ userInfo.name }}</p>
-					<p class="role">{{ userInfo.role.name }}</p>
+					<p class="name">{{ props.userInfo.name }}</p>
+					<p class="role">{{ props.userInfo.role.name }}</p>
 				</div>
 			</div>
 
@@ -59,7 +59,6 @@
 
 <script lang="ts" setup>
 import moveRotation from '../../../../base-ui/moveRotation/moveRotation.vue'
-import { ref } from 'vue'
 
 const props = defineProps({
 	userInfo: {
