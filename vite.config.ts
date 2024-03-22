@@ -23,7 +23,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 		// 项目根目录
 		root,
 		// 项目部署的基础路径
-		base: './',
+		base: '/yl_manager/',
 		// 全局引入less变量 解决默认情况下.vue文件中<style/>默认不能使用less变量
 		css: {
 			preprocessorOptions: {
