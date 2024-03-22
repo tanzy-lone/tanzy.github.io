@@ -1,0 +1,1 @@
+import{a as n}from"./index-D9s0nCnu.js";function u(){const t=n(),a=n();return{contentRef:t,headerRef:a,handleSearch:e=>{var o;console.log("queryInfo:",e),(o=t.value)==null||o.getPageList(e,!0)},handleReset:()=>{var e;(e=t.value)==null||e.getPageList(),a.value&&(a.value.formData=a.value.originFormData)}}}export{u};
