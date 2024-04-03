@@ -107,27 +107,46 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 			}
 		},
 		// 打包配置
-		// build: {
-		// 	// 关闭 sorcemap 报错不会映射到源码
-		// 	sourcemap: false,
-		// 	// 打包大小超出 400kb 提示警告
-		// 	rollupOptions: {
-		// 		// 打包入口文件 根目录下的 index.html
-		// 		// 也就是项目从哪个文件开始打包
-		// 		input: {
-		// 			index: fileURLToPath(new URL('./index.html', import.meta.url))
-		// 		},
-		// 		// 将会在每个文件发现的第一个副作用打印到控制台
-		// 		// 副作用包括 DOM的更新 操作等
-		// 		experimentalLogSideEffects: true,
-		// 		treeshake: {
-		// 			// safest recommended smallest
-		// 			// smallest 尽可能合并 也就是尽可能的进行tree shaking  将没用的代码删除
-		// 			preset: 'recommended'
-		// 			// propertyReadSideEffects: true
-		// 		}
-		// 	}
-		// },
+		build: {
+			// 关闭 sorcemap 报错不会映射到源码
+			sourcemap: false,
+			// 打包大小超出 400kb 提示警告
+			rollupOptions: {
+				// 打包入口文件 根目录下的 index.html
+				// 也就是项目从哪个文件开始打包
+				input: {
+					index: fileURLToPath(new URL('./index.html', import.meta.url))
+				},
+				// 将会在每个文件发现的第一个副作用打印到控制台
+				// 副作用包括 DOM的更新 操作等
+				experimentalLogSideEffects: true,
+				// treeshake: {
+				// 	// safest recommended smallest
+				// 	// smallest 尽可能合并 也就是尽可能的进行tree shaking  将没用的代码删除
+				// 	preset: 'recommended'
+				// 	// propertyReadSideEffects: true
+				// }
+				// 静态资源分类打包
+				output: {
+					// 仅会合并那些没有副作用的包
+					experimentalMinChunkSize: 20 * 1024, //单位为b  表示小于20kb 合并chunk
+					manualChunks: (id: string) => {
+						if (id.includes('html2canvas')) {
+							return 'html2canvas'
+						}
+						if (id.includes('node_modules')) {
+							return 'vender'
+						}
+
+						// return 'index'
+					},
+					format: 'esm',
+					chunkFileNames: 'static/js/[name]-[hash].js',
+					entryFileNames: 'static/js/[name]-[hash].js',
+					assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
+				}
+			}
+		},
 		// 配置别名
 		resolve: {
 			alias: {
