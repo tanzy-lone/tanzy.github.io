@@ -27,7 +27,7 @@ const ylRequest = new YLRequest({
 })
 
 export const ylRequest1 = new YLRequest({
-	baseURL: '/mock/api',
+	baseURL: import.meta.env.VITE_APP_MOCK_BASEURL,
 	timeout: 5000,
 	isLoading: true
 })
