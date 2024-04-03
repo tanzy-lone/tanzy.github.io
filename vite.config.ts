@@ -5,6 +5,7 @@ import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { viteMockServe } from 'vite-plugin-mock'
+import ViteCompression from 'vite-plugin-compression'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
@@ -39,6 +40,12 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 			vueJsx(),
 			// 开启ElementPlus自动引入CSS
 			ElementPlus({}),
+			ViteCompression({
+				// 文件超过多少进行压缩
+				threshold: 1024 * 20,
+				ext: '.gzip', // .gzip 或者 .gz都是一样的
+				algorithm: 'brotliCompress' //压缩算法 默认gzip
+			}),
 			viteMockServe({
 				// 如果接口为 /mock/xxx 以 mock 开头就会被拦截响应配置的内容
 				mockPath: './src/mock' // 数据模拟需要拦截的请求起始 URL

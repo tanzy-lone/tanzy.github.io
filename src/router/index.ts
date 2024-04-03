@@ -1,7 +1,6 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 import localCache from '@/utils/localCache'
-// import { firstMenu } from '@/utils/mapRouteToMenu'
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
 import useLoginStore from '@/store/login'
@@ -36,7 +35,7 @@ const routes: RouteRecordRaw[] = [
 ]
 
 const router = createRouter({
-	history: createWebHashHistory(),
+	history: createWebHistory(),
 	routes
 })
 
