@@ -1,1 +1,0 @@
-import{d as r,r as a,am as s,x as o,o as c,c as n}from"./index-eqQw-y8p.js";const i={class:"watermark",style:{height:"100%"}},p=r({__name:"watermark",setup(_){const e=a({text:"tanzylone",textColor:"rgba(0,0,0,0.9)"});return(l,m)=>{const t=s("waterMarker");return o((c(),n("div",i,null,512)),[[t,e]])}}});export{p as default};
