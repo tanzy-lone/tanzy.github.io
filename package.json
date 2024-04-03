@@ -2,7 +2,6 @@
 	"name": "yl_manager",
 	"private": true,
 	"version": "0.1.0",
-	"homepage": "/yl_manager/",
 	"scripts": {
 		"dev": "vite --mode development",
 		"build": "vue-tsc --noEmit && vite build --mode production",
