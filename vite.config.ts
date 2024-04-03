@@ -140,10 +140,10 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 
 						// return 'index'
 					},
-					format: 'esm',
-					chunkFileNames: 'static/js/[name]-[hash].js',
-					entryFileNames: 'static/js/[name]-[hash].js',
-					assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
+					format: 'esm'
+					// chunkFileNames: 'static/js/[name]-[hash].js',
+					// entryFileNames: 'static/js/[name]-[hash].js',
+					// assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
 				}
 			}
 		},
