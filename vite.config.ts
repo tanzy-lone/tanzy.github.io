@@ -24,7 +24,6 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 		// 项目根目录
 		root,
 		// 项目部署的基础路径
-		base: '/yl_manager/',
 		// 全局引入less变量 解决默认情况下.vue文件中<style/>默认不能使用less变量
 		css: {
 			preprocessorOptions: {
@@ -130,7 +129,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 				// 静态资源分类打包
 				output: {
 					// 仅会合并那些没有副作用的包
-					experimentalMinChunkSize: 40 * 1024, //单位为b  表示小于20kb 合并chunk
+					experimentalMinChunkSize: 20 * 1024, //单位为b  表示小于20kb 合并chunk
 					manualChunks: (id: string) => {
 						if (id.includes('html2canvas')) {
 							return 'html2canvas'

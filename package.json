@@ -37,6 +37,7 @@
 		"vite-plugin-compression": "^0.5.1",
 		"vite-plugin-stylelint": "^5.3.1",
 		"vue": "^3.4.19",
+		"vue-captcha": "^1.0.2",
 		"vue-i18n": "^9.9.1",
 		"vue-router": "^4.3.0",
 		"vuedraggable": "^2.24.3",

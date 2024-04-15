@@ -38,11 +38,12 @@ import { ElForm } from 'element-plus'
 
 import useLoginStore from '@/store/login'
 import localCache from '@/utils/localCache'
+import type { FormInstance, FormRules } from 'element-plus'
 
 const formOption = reactive<IFormOptions>({ name: 'coderwhy', password: '123456' })
 const formRef = ref<InstanceType<typeof ElForm>>()
-const formItemRef = ref()
-const rules = reactive({
+const formItemRef = ref<FormInstance>()
+const rules = reactive<FormRules<IFormOptions>>({
 	name: [
 		{
 			required: true,
